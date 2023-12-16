@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/articleImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/article_image"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/articleTextView"
+                android:layout_width="345dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="0.4"
+                android:lines="2"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/nav_color"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10sp"
+                android:layout_marginHorizontal="20sp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/articleAuthorIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/author"
+                        app:tint="@color/nav_color"
+                        android:contentDescription="@string/author_name" />
+
+                    <TextView
+                        android:id="@+id/articleAuthorTextView"
+                        android:layout_width="120sp"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="false"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/nav_color"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/articleDateTextView"
+                        android:layout_width="120sp"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="false"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textColor="@color/nav_color"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/articleDateIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/date"
+                        app:tint="@color/nav_color"
+                        android:contentDescription="@string/date" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
